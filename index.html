@@ -5,23 +5,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<title>glory1123-我要过生日啦！</title>
 		<style>
-			@keyframes scale {
-			    0% {
-			        transform: scale(1);
-			    }
-			    50% {
-			        transform: scale(1.1);
-			    }
-			    100% {
-			        transform: scale(1);
-			    }
-			}
-			.birthday-message {
-			    display: none;
-			    margin-top: 20px;
-			    font-size: 1.5em;
-			    color: #333;
-			}
 			#a,1{color: #00bbff;}
 			header {background-color: #ccccff;}
 			header:hover{color: aqua;}
@@ -60,7 +43,7 @@
 	<body>
 		<div id="wrapper">
 		<header>
-			<h1>glory1123 &nbsp; 主页-生日到来</h1>
+			<h1>glory1123 &nbsp; 主页</h1>
 		</header>
 		<nav>
 			<ul>
@@ -78,45 +61,10 @@
 			我喜欢计算机技术，目前正在学习HTML、python等语言。<br/>
 			目前，我是一名六年级小学生，马上就要毕业了。
 			</p>
-			<div class="birthday-container">
-			    <h3>距离我的生日还有:</h3>
-			    <div class="countdown" id="countdown"></div>
-			    <p>祝你生日快乐！希望我的的生日充满喜悦和幸福。</p>
-			    <div class="birthday-message" id="birthdayMessage">生日快乐！希望我的每一天都充满阳光和欢笑！</div>
-			</div>
 		</main>
 		<footer>
 			<p><small>copyright &nbsp; &copy; glory 2024 &nbsp; <a href="https://github.com/glory1123/">my&nbsp;github</a></small></p>
 		</footer>
 		</div>
-		<script>
-		    // 获取当前日期和目标日期
-		    const now = new Date();
-		    const targetDate = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
-		
-		    // 更新倒计时
-		    const countdownElement = document.getElementById('countdown');
-		    const birthdayMessage = document.getElementById('birthdayMessage');
-		
-		    // 每秒更新倒计时
-		    const countdownInterval = setInterval(() => {
-		        const distance = targetDate - now;
-		
-		        // 时间计算
-		        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-		        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-		        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-		        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-		
-		        countdownElement.textContent = `${days}天${hours}时${minutes}分${seconds}秒`;
-		
-		        // 生日当天显示生日祝福
-		        if (distance < 0) {
-		            countdownElement.style.display = 'none';
-		            birthdayMessage.style.display = 'block';
-		            clearInterval(countdownInterval);
-		        }
-		    }, 1000);
-		</script>
 	</body>
 </html>
