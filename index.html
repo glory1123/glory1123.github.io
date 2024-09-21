@@ -1,70 +1,151 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<title>glory1123-index</title>
-		<style>
-			#a,1{color: #00bbff;}
-			header {background-color: #ccccff;}
-			header:hover{color: aqua;left:5px;}
-			body {background-color: rgba(12, 251, 255, 0.4);}
-			nav {
-				background-color: #19ff94;
-				float: left;
-				width: 140px;
-				padding: 5px;
-			}
-			main {margin-left: 160px; padding: 10px;}
-			#wrapper {
-				width: 80%;
-				margin-left: auto;
-				margin-right: auto;
-				background-color: rgba(37, 255, 248, 0.1);
-			}
-			h1 {margin: 0; padding: 10px;}
-			footer {
-				text-align: center;
-				font-style: italic;
-				background-color: #ccccff;
-				clear: both;
-			}
-			nav ul { list-style-type: none; padding: 10px;}
-			nav a {
-				padding: 20px;
-				font-weight: bold;
-				display: block;
-				border-bottom: 5px solid #ffffff;
-				}
-			a:link {color: #ffffff;}
-			a:hover {text-decoration: none;color: #f017ff;left:5px}
-		</style>
-	</head>
-	<body>
-		<div id="wrapper">
-		<header>
-			<h1>glory1123 &nbsp; 主页</h1>
-		</header>
-		<nav>
-			<ul>
-				<li><a href="" id="a,1">首页</a></li>
-				<li><a href="hyl.html">个人信息</a></li>
-				<li><a href="tools/index.html">工具集</a></li>
-				<li><a href="mail:2806148629@qq.com">联系</a></li>
-				<li><a href="from.html">关于</a></li>
-			</ul>
-		</nav>
-		<main>
-			<h2>首页</h2>
-			<p>
-				&nbsp; &nbsp;你好，我的网名叫glory，名字拼音首字母是dy.<br/>
-			我喜欢计算机技术，目前正在学习HTML、python等语言。<br/>
-			目前，我是一名六年级小学生，马上就要毕业了。
-			</p>
-		</main>
-		<footer>
-			<p><small>copyright &nbsp; &copy; glory 2024 &nbsp; <a href="https://github.com/glory1123/">my&nbsp;github</a></small></p>
-		</footer>
-		</div>
-	</body>
+
+<head>
+  <title>glory1123的个人网站</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="webf/glory1123-ico.png" type="image/x-icon">
+  <style>
+  body {
+    font-family: HarmonyOS_Sans_SC_Medium, "微软雅黑", Arial, sans-serif;
+    height: 100vh;
+    background: linear-gradient(to right bottom, #99F8FF 5%, #FCF143 75%);
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    padding: 3px;
+  }
+  
+  .daohang {
+    background-color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 3px;
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 20px;
+    left: 100px;
+    text-align: center;
+  }
+  
+  .daohang ul {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 50px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .daohang li {
+    float: left;
+    text-align:center;
+  }
+  @media (max-width: 500px) {
+  .daohang li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s, font-size 0.3s;
+    left: auto;
+  }
+}
+  .daohang li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s, font-size 0.3s;
+    left: 275px;
+  }
+  
+  .daohang li a:hover {
+    color: #0056b3;
+  }
+  
+  .daohang li a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 16px;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #0056b3;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .daohang li a:hover::after {
+    transform: scaleX(1);
+  }
+  
+  .daohang .active {
+    font-weight: bold;
+    color: #0056b3; /* 假设.active类要改变文字颜色 */
+  }
+  
+  .wenzhang, .wenzhang1 {
+    background-color: white;
+    border: 1px solid black; /* 假设你想要边框，这里使用1px实线黑色 */
+    border-radius: 25px;
+    padding: 20px; /* 假设你想要内部填充 */
+    margin: 20px auto; /* 假设你想要自动边距 */
+    text-align: center;
+  }
+  
+  .wenzhang .huan, .wenzhang1 .huan {
+    font-family: 宋体;
+    font-size: 20px;
+  }
+  
+  .wenzhang .jie, .wenzhang1 .jie {
+    font-size: 14px;
+    font-family: 楷体;
+  }
+  
+  .wenzhang .qianbei .qian, .wenzhang1 .qianbei .qian {
+    font-family: 宋体;
+    text-align: center;
+  }   
+  
+  </style>
+</head>
+
+<body>
+	<div id="titles">
+	<div>
+		<h1>——glory1123——</h1>
+	</div>
+	<div>
+		<h2>glory1123的个人网站</h2>
+		<h3>glory1123.github.io</h3>
+	</div>
+	</div>
+  <div class="daohang">
+	  <div id="daohang1">
+	  	<ul>
+      <li><a class="active" href="">首页</a></li>
+      <li><a href="jieshao.html">介绍</a></li>
+      <li><a href="text.html">文章</a></li>
+      <li><a href="toos/index.html">工具</a></li>
+    </ul>
+	  </div>
+   
+   
+  </div>
+ <div class="daohang"><strong>&nbsp;&nbsp;&nbsp; 暂无链接<br/>glory1123</strong>
+   </div>
+</body>
+
 </html>
